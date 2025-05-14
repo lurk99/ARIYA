@@ -284,7 +284,7 @@ function searchData() {
     return;
   }
 
-  const webAppURL = "https://script.google.com/macros/s/AKfycbyJsl2Akdi6_54ENnOnGvCUHynCCIwdkjMbhBeoCzv-gquOPOcvwGrV-xEZf56ai7YBVQ/exec"; // Gantikan URL ini
+  const webAppURL = "https://script.google.com/macros/s/AKfycbxzewy1KxFH5C3XJarQjRQQ_6CLcXRfen5QKILp_a7s-qeOdlmY1Ddjq7nh1T3eOJf9QQ/exec"; // Gantikan URL ini
 
   fetch(`${webAppURL}?q=${encodeURIComponent(query)}`)
     .then(response => response.text())
