@@ -275,14 +275,33 @@ table td:not(:first-child) {
         </div>
 
   <script>
-    function searchData() {
-      const query = document.getElementById('query').value.trim();
-      if (query) {
-        google.script.run.withSuccessHandler(displayResults).getSearchResults(query);
-      } else {
-        alert("Sila masukkan NO PLATE KENDERAAN.");
-      }
-    }
+    
+
+function searchData() {
+  const query = document.getElementById('query').value.trim();
+  if (!query) {
+    alert("Sila masukkan NO PLATE KENDERAAN.");
+    return;
+  }
+
+  const webAppURL = "https://script.google.com/macros/s/AKfycbyJsl2Akdi6_54ENnOnGvCUHynCCIwdkjMbhBeoCzv-gquOPOcvwGrV-xEZf56ai7YBVQ/exec"; // Gantikan URL ini
+
+  fetch(`${webAppURL}?q=${encodeURIComponent(query)}`)
+    .then(response => response.text())
+    .then(html => {
+      const searchResultsDiv = document.getElementById('searchResults');
+      searchResultsDiv.style.display = "block";
+      searchResultsDiv.innerHTML = html;
+    })
+    .catch(error => {
+      alert("Ralat semasa mengambil data.");
+      console.error(error);
+    });
+}
+
+
+
+
 
     function displayResults(results) {
       const searchResultsDiv = document.getElementById('searchResults');
