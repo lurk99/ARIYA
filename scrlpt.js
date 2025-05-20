@@ -100,3 +100,8 @@ window.onload = () => {
       alert("Gagal muatkan data dropdown. Sila cuba lagi.");
     });
 };
+
+setTimeout(function () {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }, 5000); // 5000ms = 5 saat
