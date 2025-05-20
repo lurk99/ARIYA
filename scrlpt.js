@@ -101,7 +101,13 @@ window.onload = () => {
     });
 };
 
-setTimeout(function () {
-      document.getElementById('loading-screen').style.display = 'none';
-      document.getElementById('main-content').style.display = 'block';
-    }, 3000); // 5000ms = 5 saat
+window.addEventListener('load', function () {
+  // Delay 5 saat sebelum paparkan kandungan utama
+  setTimeout(function () {
+    const loadingScreen = document.getElementById('loading-screen');
+    const mainContent = document.getElementById('main-content');
+
+    if (loadingScreen) loadingScreen.style.display = 'none';
+    if (mainContent) mainContent.style.display = 'block';
+  }, 3000);
+});
