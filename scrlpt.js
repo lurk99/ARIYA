@@ -104,4 +104,4 @@ window.onload = () => {
 setTimeout(function () {
       document.getElementById('loading-screen').style.display = 'none';
       document.getElementById('main-content').style.display = 'block';
-    }, 5000); // 5000ms = 5 saat
+    }, 3000); // 5000ms = 5 saat
