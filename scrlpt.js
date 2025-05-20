@@ -109,5 +109,5 @@ window.addEventListener('load', function () {
 
     if (loadingScreen) loadingScreen.style.display = 'none';
     if (mainContent) mainContent.style.display = 'block';
-  }, 3000);
+  }, 1500);
 });
