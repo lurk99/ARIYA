@@ -13,10 +13,10 @@
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lurk - ARIYA Registration System</title>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/lurk99/img/main/ariyalogo-lnktre.PNG" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
 </head>
 <body>
 <div id="loading-screen">
@@ -28,13 +28,11 @@
   <div class="page-content">
   <header class="banner">
   <div class="logo-title">
-
 <img src="https://raw.githubusercontent.com/lurk99/img/09e38289d7b015bd9975ed197f3ef7952b5a272c/logoserenia.svg" 
        onmouseover="this.style.transform='scale(1.1)'" 
        onmouseout="this.style.transform='scale(1)'" 
        style="width:auto; height:50px;  transition:transform 0.3s ease;" />&nbsp;&nbsp;&nbsp;&nbsp;
-	  
-	<img src="https://raw.githubusercontent.com/lurk99/img/main/ariyalogo-lnktre.PNG" alt="ARIYA2" class="logo-3d-circle" />
+<img src="https://raw.githubusercontent.com/lurk99/img/main/ariyalogo-lnktre.PNG" alt="ARIYA2" class="logo-3d-circle" />
 <center><img src="https://raw.githubusercontent.com/lurk99/img/refs/heads/main/serenia-ariya-logo.PNG" 
        onmouseover="this.style.transform='scale(1.1)'" 
        onmouseout="this.style.transform='scale(1)'" 
@@ -45,8 +43,7 @@
 onmouseover="this.style.transform='scale(1.1)'" 
 onmouseout="this.style.transform='scale(1)'" 
 style="width:100px; height:105px; border-radius:50%; border:6px solid #fff; box-shadow:0 8px 20px rgba(0,0,0,0.3);  transition:transform 0.3s ease;   display: flex;"></center><h2>SISTEM PENDAFTARAN<BR>MAKLUMAT PEMILIK / PENYEWA RUMAH<BR>SERENIA ARIYA</h2>
-  <form id="undiForm" onsubmit="submitForm(event)">
-  
+  <form id="FormReg" onsubmit="submitForm(event)">
   <div class="form-group">
   <label for="nama">Nama:</label>
   <input type="text" id="nama" name="nama" required />
